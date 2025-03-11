@@ -6,28 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - run: pip install -r requirements.txt
+      - run: sudo apt-get install pandoc inkscape texlive-xetex
       - uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-          
-      - name: Cache APT packages
-        uses: actions/cache@v3
-        with:
-          path: /var/cache/apt/archives
-          key: ${{ runner.os }}-apt-${{ hashFiles('**/lab01.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-
-            
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-        
-      - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get install -y pandoc inkscape texlive-xetex
-        
       - run: python -m nbconvert lab1/pint_and_boiling_point.ipynb --to pdf --execute
       - uses: actions/upload-artifact@v4
         with:
