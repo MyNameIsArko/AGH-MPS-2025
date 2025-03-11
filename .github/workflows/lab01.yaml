@@ -9,5 +9,5 @@ jobs:
       - run: pip install nbconvert
       - run: sudo apt-get install pandoc
       - uses: actions/checkout@v4
-      - run: python -m nbconvert lab1/pint_and_boiling_point.ipynb
+      - run: python -m nbconvert lab1/pint_and_boiling_point.ipynb --to pdf
 
