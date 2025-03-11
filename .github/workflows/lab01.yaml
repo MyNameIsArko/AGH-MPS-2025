@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install nbconvert
-      - run: sudo apt-get install pandoc
+      - run: sudo apt-get install pandoc inkscape
       - uses: actions/checkout@v4
       - run: python -m nbconvert lab1/pint_and_boiling_point.ipynb --to pdf
 
