@@ -22,8 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
             
-      - name: Install Python dependencies
-        run: pip install nbconvert ipykernel pinta matplotlib numpy scipy open-atmos-jupyter-utils
+      # - name: Install Python dependencies
+      #   run: pip install 
         
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y pandoc inkscape texlive-xetex
