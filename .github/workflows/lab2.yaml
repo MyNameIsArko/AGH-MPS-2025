@@ -1,0 +1,17 @@
+name: lab2
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install pandoc inkscape texlive-xetex
+      - run: pip install -r requirements.txt
+      - run: python -m nbconvert lab2/lab2.ipynb --to pdf --execute
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lab2.pdf
+          path: lab2/lab2.pdf
+
