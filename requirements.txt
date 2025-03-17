@@ -1,6 +1,6 @@
 nbconvert 
 ipykernel 
-pinta 
+pint
 matplotlib 
 numpy 
 scipy 

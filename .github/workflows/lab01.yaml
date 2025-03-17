@@ -13,4 +13,3 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           path: lab1/pint_and_boiling_point.pdf
-
