@@ -11,7 +11,7 @@ Create a GitHub Action executing the notebook (see https://nbconvert.readthedocs
 and uploading the resultant pdf as an action artifact (see https://github.com/actions/upload-artifact).
 
 Scoring:
-- 20% narrative explaining the analysis approach, and the goal of the analysis
+- 20% narrative explaining the analysis approach, and the goal of the analysis - is to gauge how much increasing resolution increase the solution
 - 20% Python code implementing the error measure
 - 20% Python code implementing the logic repeating the simulations for a range of time or grid steps
 - 20% Python code creating a plot with the results of the analysis
