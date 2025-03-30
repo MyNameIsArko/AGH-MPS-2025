@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get update
       - run: sudo apt-get install pandoc inkscape texlive-xetex
       - run: pip install -r requirements.txt
       - run: python -m nbconvert lab3/lab3.ipynb --to pdf --execute
