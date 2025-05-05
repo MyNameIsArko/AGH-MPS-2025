@@ -5,3 +5,4 @@ matplotlib
 numpy 
 scipy 
 open-atmos-jupyter-utils
+numba
